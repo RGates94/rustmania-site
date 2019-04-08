@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+<title>About RustMania</title>
+</head>
+<body>
+<header><h2>About RustMania</h2></header>
+<p>We are making a rhythm game with custom songs, noteskins, and themes!</p>
+
+<p>The game will load each type of content from its own dedicated folder.  By default these will be in a subfolder of the main install location, titled <b>Songs</b>, <b>Noteskins</b>, and <b>Themes</b> respectively.</p>
+
+<h3>Songs</h3>
+<p>Within the songs folder, each song should have its own folder.  These folders should contain: <ul><li>The music file, in either .mp3, .ogg, or .wav format</li> <li>Either a .sm or a .rm file that dictates the structure of the notes to be hit</li> <li>Any other resources you wish to use</li></ul> We currently do not have support for background images or videos, and we also do not display song banners, but this is planned for the future.</p>
+
+<h3>Noteskins</h3>
+<p>Within the Noteskins folder, each noteskin should be given its own subfolder.  Within each folder there should be: <ul><li>A .toml file, this file should contain:<ul><li>The location of a image file for each part of the noteskin</li><li>A line for each aspect of the noteskin you wish to vary from default.</li></ul></li><li>Any resources specified within your .toml.</li></ul>While we aim not to break backward compatibilty, it is early in development and the format may change before final release.</p>
+
+<h3>Themes</h3>
+<p>The theming capabilities of RustMania are currenly in their very early stages, so the format for a theme is currently not set. Because of this, we omit a detailed description of theme format, and instead outline the plan for themes going forward.</p>
+
+<p>A theme will consist of a list of <b>Screens</b>, these screens will themselves consist of a list of <b>Elements</b>, these elements dictate what will be displayed on the screen.  Here is a list of currently implemented Elements:
+
+<ul><li>Notefield</li><li>Music</li></ul>
+
+And here are some elements that are currently being planned:
+
+<ul><li>Text Box</li><li>Image</li><li>Element List</li></ul>The number of elements is likely to expand considerably as the capabilities of RustMania grow. We will keep this list updated whenever new Elements are added.</p>
+
+<p>To allow variation between elements of the same type, most types of Elements accept one or more <b>Resoureces</b>.  A Resource is a piece of data that is specified by a theme, the exact value of this data can be changed based on a theme specified script.  Resoureces can be divided into two types: <dl><di>Screen Resoureces</di> <dd>Resources that are only available to the current screen</dd><di>Global Resoureces</di> <dd>Resources that are available to all screens, but that can only be changed when going between screens</dd></dl> The exact details of the Resource system are currently a work in progress, so we do not currently have a list of Resource types available.</p>
+</body>
+</html>
